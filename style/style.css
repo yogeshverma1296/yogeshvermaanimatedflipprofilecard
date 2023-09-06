@@ -33,7 +33,7 @@ body{
     align-items: center;
     opacity: 1;
     transition: all 0.4s;
-    background-image: url("/images/yogesh\ verma\ web\ developer\ computer\ science.jpg");
+    background-image: url(/yogeshvermawebdeveloper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
