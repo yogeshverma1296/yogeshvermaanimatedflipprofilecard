@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #a0b2c6;
+}
+.card{
+    width: 270px;
+    height: 350px;
+    transition: all 0.4s;
+    border-radius: 15px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+.card:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+.first-box{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.4s;
+    background-image: url("/images/yogesh\ verma\ web\ developer\ computer\ science.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+}
+.card:hover .first-box{
+    height: 0;
+    opacity: 0;
+}
+.title{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+.title h2{
+    font-weight: 600;
+    line-height: 20px;
+    color: #feb200;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 1.6rem;
+}
+.title span{
+    font-size: 14px;
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    color: #feb200;
+}
+/* second-box */
+.second-box{
+    height: 0%;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: all 0.4s;
+    transform: rotate(90deg) scale(-1);
+}
+.card:hover .second-box{
+    opacity: 1;
+    height: 100%;
+    transform: rotate(0deg);
+}
+.second-box img{
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.second-box h3{
+    font-size: 22px;
+}
+.second-box span{
+    font-size: 16px;
+    color: #717171;
+}
+.social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 25px;
+}
+.social a{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    animation: reverseAnimate 0.7s ease;
+}
+.social a:hover{
+    transition: 0.6s ease;
+    animation: animate 0.7s ease;
+    transform:scale(1.1);
+}
+.social a:first-child{
+    background: linear-gradient(to bottom,#7f0ae8,#fd0070,#feb200);
+    color: #fff;  
+}
+.social a:nth-child(2){
+    background: #1da1f2;
+    color: #fff;
+}
+.social a:last-child{
+    background-color: #0d8bf0;
+    color: #fff;
+}
+.second-box .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.btns button{
+    width: 100px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #560bad;
+    background: transparent;
+    transition: all 0.7s;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #560bad;
+    cursor: pointer;
+}
+.btns button a{
+    text-decoration: none;
+    color: #000;
+}
+.btns button:hover a{
+    text-decoration: none;
+    color: #fff;
+}
+.btns button:hover{
+    color: #fff;
+    transform:scale(1.1);
+    outline: 2px solid #764ba8;
+    box-shadow: 4px 5px 17px -4px #560bad;
+}
+.btns button::before{
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #560bad;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1s;
+}
+.btns button:hover::before{
+    width: 250%;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg) scale(1);
+    }
+    100%{
+        transform: rotate(360deg) scale(1.1);
+    }
+}
+@keyframes reverseAnimate {
+    0%{
+        transform: rotate(360deg) scale(1.1);
+    }
+    100%{
+        transform: rotate(0deg) scale(1);
+    }
+}
